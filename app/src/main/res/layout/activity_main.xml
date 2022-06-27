@@ -5,30 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="12dp"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="12dp">
 
         <ImageView
             android:layout_width="24dp"
             android:layout_height="32dp"
+            android:layout_marginTop="5dp"
             android:src="@drawable/pokeball" />
 
         <TextView
             android:layout_width="316dp"
             android:layout_height="30dp"
-            android:text="Pokédex"
+            android:text="  Pokédex"
             android:textColor="@color/black"
             android:textSize="24sp" />
 
         <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:src="@drawable/arrow_downward" />
+            android:layout_width="9dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/num_img" />
+
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/vector" />
 
     </LinearLayout>
 
@@ -36,6 +44,7 @@
         android:id="@+id/recyclerView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="12dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="3"
         tools:listitem="@layout/item_pokemon" />

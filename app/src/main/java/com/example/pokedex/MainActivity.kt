@@ -18,15 +18,15 @@ class MainActivity : AppCompatActivity() {
     private fun initAdapter() {
 
         val list = arrayListOf<PokemonModel>()
-        list.add(PokemonModel("004", charmander))
-        list.add(PokemonModel("025", pikachu))
-        list.add(PokemonModel("004", mew))
-        list.add(PokemonModel("001", bulbasaur))
-        list.add(PokemonModel("012", butterfree))
-        list.add(PokemonModel("007", squirtle))
-        list.add(PokemonModel("004", aron))
-        list.add(PokemonModel("132", ditto))
-        list.add(PokemonModel("092", gastly))
+        list.add(PokemonModel("#004", charmander))
+        list.add(PokemonModel("#025", pikachu))
+        list.add(PokemonModel("#004", mew))
+        list.add(PokemonModel("#001", bulbasaur))
+        list.add(PokemonModel("#012", butterfree))
+        list.add(PokemonModel("#007", squirtle))
+        list.add(PokemonModel("#004", aron))
+        list.add(PokemonModel("#132", ditto))
+        list.add(PokemonModel("#092", gastly))
 
         pokemonAdapter = PokemonAdapter(list)
         binding.recyclerView.adapter = pokemonAdapter

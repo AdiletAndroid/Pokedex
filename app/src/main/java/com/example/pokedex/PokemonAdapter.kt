@@ -1,5 +1,6 @@
 package com.example.pokedex
 
+import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -68,7 +69,7 @@ class PokemonAdapter(val list: ArrayList<PokemonModel>) :
                 butterfree -> {
                     val color = itemView.context.getColor(R.color.butterfree_clr)
                     updateColor(color)
-                    binding.pokemonImg.load(R.drawable.bulbasaur)
+                    binding.pokemonImg.load(R.drawable.butterfree)
                 }
                 gastly -> {
                     val color = itemView.context.getColor(R.color.gastly_clr)
@@ -86,8 +87,11 @@ class PokemonAdapter(val list: ArrayList<PokemonModel>) :
             val textDrawable = binding.pokemonName.background as GradientDrawable
             textDrawable.mutate()
             textDrawable.setTint(color)
+
+            val textNumber = binding.pokemonNumber
+            textNumber.setTextColor(color)
         }
     }
 }
-}
-}
+
+
