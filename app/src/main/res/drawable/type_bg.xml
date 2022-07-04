@@ -4,9 +4,7 @@
         android:width="1dp"
         android:color="@color/charmander_clr" />
     <solid android:color="@color/charmander_clr" />
-    <corners
-        android:bottomLeftRadius="8dp"
-        android:bottomRightRadius="8dp" />
+    <corners android:radius="10dp" />
 
     <padding
         android:bottom="1dp"

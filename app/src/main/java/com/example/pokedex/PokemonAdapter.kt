@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.pokedex.databinding.ItemPokemonBinding
 
-class PokemonAdapter(val list: ArrayList<PokemonModel>) :
+class PokemonAdapter(val list: ArrayList<PokemonModel>, val listener: ItemListener) :
     RecyclerView.Adapter<PokemonAdapter.PokemonViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonViewHolder {
@@ -30,6 +30,10 @@ class PokemonAdapter(val list: ArrayList<PokemonModel>) :
         fun onBind(model: PokemonModel) {
             binding.pokemonName.text = model.name
             binding.pokemonNumber.text = model.number
+            itemView.setOnClickListener {
+                listener.itemclick(model)
+            }
+
             when (model.name) {
                 pikachu -> {
                     val color = itemView.context.getColor(R.color.pikachu_clr)
